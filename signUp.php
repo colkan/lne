@@ -9,7 +9,23 @@
     <!------------
         NAVIGATION BAR
     ----------------->
-    <?php include 'backend/shared/loginNav.php';?>
+    <nav class="nav-header-sign__up">
+        <ul>
+            <li><a href="">
+            <i class="fa-solid fa-puzzle-piece"></i>
+                Home
+            </a></li>
+
+            <li><a href="">
+                About
+            </a></li>
+
+            <li><a href="">
+                Language:English
+            </a></li>
+        </ul>
+    </nav>
+
     <div class="form-container">
 
     <div class="form-content">
@@ -49,9 +65,10 @@
                 <label for="remember">Remember me</label>
             </div>
         </form>
-    </div>
-    <footer class="form-footer">
+
+        <footer class="form-footer">
             <p>Already have an account? <a href="login.php"> Login now</a></p>
         </footer>
+    </div>
     </div>
 </section>
