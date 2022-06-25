@@ -1,5 +1,5 @@
 <?php
-    $pageTitle="SignUp | Tweet";
+    $pageTitle="Login | Tweet";
 ?>
 
 <?php include 'backend/shared/header.php'; ?>
@@ -10,27 +10,20 @@
         NAVIGATION BAR
     ----------------->
     <?php include 'backend/shared/loginNav.php';?>
+
     <div class="form-container">
 
     <div class="form-content">
         <h2 class="header__form-content">
-            Create your account
+            Login to Tweet
         </h2>
         <form action="" class="formField">
             <div class="form-group">
-                <label for="firstName">FirstName</label>
-                <input type="text" name="firstName" id="firstName">
+                <label for="username">Username or Email</label>
+                <input type="text" name="username" id="username">
             </div>
 
-            <div class="form-group">
-                <label for="lastName">LastName</label>
-                <input type="text" name="lastName" id="lastName">
-            </div>
-
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="text" name="email" id="email">
-            </div>
+            
 
             <div class="form-group">
                 <label for="password">Password</label>
@@ -38,20 +31,17 @@
             </div>
 
 
-            <div class="form-group">
-                <label for="password2">Confirm Password</label>
-                <input type="password" name="password2" id="password2">
-            </div>
+           
 
             <div class="form-btn-wrapper">
-                <button type="submit" class="btn-form">Signup</button>
+                <button type="submit" class="btn-form">Log In</button>
                 <input type="checkbox" class="form-checkbox" id="check" name="remember">
                 <label for="remember">Remember me</label>
             </div>
         </form>
     </div>
     <footer class="form-footer">
-            <p>Already have an account? <a href="login.php"> Login now</a></p>
+            <p>New to Tweet? <a href="signUp.php"> Sign up to Tweet</a></p>
         </footer>
     </div>
 </section>
