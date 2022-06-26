@@ -1,8 +1,7 @@
 <?php 
 include 'backend/initialize.php';
 
-$db=Database::instance();
-$db->prepare("Select * FROM users");
+
 include 'backend/shared/header.php';?>
 
 

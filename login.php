@@ -30,7 +30,10 @@
                 <input type="password" name="password" id="password">
             </div>
 
-
+            <div class="s-password">
+            <input type="checkbox" class="form-checkbox" id="s-password" onclick="showLoginPassword()">
+                <label for="s-password">Show Password</label>
+            </div>
            
 
             <div class="form-btn-wrapper">
@@ -45,3 +48,5 @@
         </footer>
     </div>
 </section>
+
+<script src="frontend/assets/js/showPassword.js"></script>
