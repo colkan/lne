@@ -1,10 +1,10 @@
 
 <?php
 class Database{
-    public $pdo;
+    protected $pdo;
     protected static $instance;
     protected function __construct(){
-        $this->pdo=new PDO("mysql:host".DB_HOST.";Ddbname=".DB_NAME,DB_USER,DB_PASS);
+        $this->pdo=new PDO("mysql:host".DB_HOST.";dbname=".DB_NAME,DB_USER,DB_PASS);
     }
 
     public static function instance(){

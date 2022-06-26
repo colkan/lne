@@ -1,22 +1,23 @@
 <?php
+include_once "backend/initialize.php";
     $pageTitle="SignUp | Tweet";
 ?>
 
-<?php include 'backend/shared/header.php'; ?>
+<?php require_once 'backend/shared/header.php'; ?>
 
 <section class="sign-container">
 
     <!------------
         NAVIGATION BAR
     ----------------->
-    <?php include 'backend/shared/loginNav.php';?>
+    <?php require_once 'backend/shared/loginNav.php';?>
     <div class="form-container">
 
     <div class="form-content">
         <h2 class="header__form-content">
             Create your account
         </h2>
-        <form action="" class="formField">
+        <form class="formField" action="<?php echo h($_SERVER['PHP_SELF']); ?>" method="POST">
             <div class="form-group">
                 <label for="firstName">FirstName</label>
                 <input type="text" name="firstName" id="firstName">
@@ -43,6 +44,12 @@
                 <input type="password" name="password2" id="password2">
             </div>
 
+            <div class="s-password">
+            <input type="checkbox" class="form-checkbox" id="s-password" onclick="showPassword()">
+                <label for="s-password">Show Password</label>
+            </div>
+
+
             <div class="form-btn-wrapper">
                 <button type="submit" class="btn-form">Signup</button>
                 <input type="checkbox" class="form-checkbox" id="check" name="remember">
@@ -55,3 +62,5 @@
         </footer>
     </div>
 </section>
+
+<script src="frontend/assets/js/showPassword.js"></script>
