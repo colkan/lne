@@ -1,15 +1,16 @@
 <?php
+include_once "backend/initialize.php";
     $pageTitle="Login | Tweet";
 ?>
 
-<?php include 'backend/shared/header.php'; ?>
+<?php require_once 'backend/shared/header.php'; ?>
 
 <section class="sign-container">
 
     <!------------
         NAVIGATION BAR
     ----------------->
-    <?php include 'backend/shared/loginNav.php';?>
+    <?php require_once 'backend/shared/loginNav.php';?>
 
     <div class="form-container">
 
@@ -17,17 +18,17 @@
         <h2 class="header__form-content">
             Login to Tweet
         </h2>
-        <form action="" class="formField">
+        <form action="<?php echo h($_SERVER['PHP_SELF']); ?>" class="formField" method="POST">
             <div class="form-group">
                 <label for="username">Username or Email</label>
-                <input type="text" name="username" id="username">
+                <input type="text" name="username" id="username" required>
             </div>
 
             
 
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" name="password" id="password">
+                <input type="password" name="password" id="password" required>
             </div>
 
             <div class="s-password">

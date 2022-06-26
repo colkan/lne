@@ -20,28 +20,28 @@ include_once "backend/initialize.php";
         <form class="formField" action="<?php echo h($_SERVER['PHP_SELF']); ?>" method="POST">
             <div class="form-group">
                 <label for="firstName">FirstName</label>
-                <input type="text" name="firstName" id="firstName">
+                <input type="text" name="firstName" id="firstName" autocomplete="off" required>
             </div>
 
             <div class="form-group">
                 <label for="lastName">LastName</label>
-                <input type="text" name="lastName" id="lastName">
+                <input type="text" name="lastName" id="lastName" autocomplete="off" required>
             </div>
 
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="text" name="email" id="email">
+                <input type="text" name="email" id="email" autocomplete="off" required>
             </div>
 
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" name="password" id="password">
+                <input type="password" name="password" id="password" autocomplete="off" required>
             </div>
 
 
             <div class="form-group">
                 <label for="password2">Confirm Password</label>
-                <input type="password" name="password2" id="password2">
+                <input type="password" name="password2" id="password2" autocomplete="off" required>
             </div>
 
             <div class="s-password">
