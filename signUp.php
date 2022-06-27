@@ -1,5 +1,22 @@
 <?php
 include_once "backend/initialize.php";
+
+function formSanitizer($input){
+    $input=trim(strip_tags($input));
+    $input=htmlspecialchars($input);
+    return $input;
+}
+
+if(is_post_request()){
+    if(isset($_POST['firstName']) && !empty($_POST['firstName'])){
+     $fname=FormSanitizer::formSanitizerName($_POST['firstName']);
+     $lname=FormSanitizer::formSanitizerName($_POST['lastName']);
+     $email=FormSanitizer::formSanitizerString($_POST['email']);
+     $pass=FormSanitizer::formSanitizerString($_POST['password']);
+     $pass2=FormSanitizer::formSanitizerString($_POST['password2']);
+        
+    }
+}
     $pageTitle="SignUp | Tweet";
 ?>
 

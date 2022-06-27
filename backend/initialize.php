@@ -3,7 +3,16 @@ ob_start();
 
   date_default_timezone_set('Asia/Manila');
 
-  include 'classes/Database.php';
+  // include 'classes/Database.php';
+  // include "classes/FormSanitizer.php";
+
+  spl_autoload_register(function($class){
+    require_once "classes/$class.php";
+  });
+
+
+
+
   define("DB_HOST", "localhost");
   define("DB_NAME", "rafa");
   define("DB_USER", "jel");
